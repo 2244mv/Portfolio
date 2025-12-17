@@ -3,7 +3,7 @@
   padding: 80px 6%;
   background-color: #000;
   color: #fff;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
   display: inline-block;
   position: relative;
   cursor: pointer;
-  background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
+  background: linear-gradient(90deg, #B415ff 10%, #Df8908 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -35,7 +35,7 @@
   width: 0;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
+  background: linear-gradient(90deg, #B415ff 10%, #Df8908 100%);
   transition: width 0.4s ease;
 }
 
@@ -65,15 +65,9 @@
 }
 
 /* Staggered animation */
-.mywork-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.mywork-card:nth-child(2) {
-  animation-delay: 0.25s;
-}
-.mywork-card:nth-child(3) {
-  animation-delay: 0.4s;
-}
+.mywork-card:nth-child(1) { animation-delay: 0.1s; }
+.mywork-card:nth-child(2) { animation-delay: 0.25s; }
+.mywork-card:nth-child(3) { animation-delay: 0.4s; }
 
 /* Hover effect */
 .mywork-card:hover {
@@ -108,7 +102,7 @@
 }
 
 .work-name:hover {
-  background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
+  background: linear-gradient(90deg, #B415ff 10%, #Df8908 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -143,7 +137,7 @@
   gap: 6px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #b415ff;
+  color: #B415ff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -154,19 +148,13 @@
 }
 
 .mywork-links a:hover {
-  color: #df8908;
+  color: #Df8908;
 }
 
 /* ================= ANIMATION ================= */
 @keyframes revealCard {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================= RESPONSIVE ================= */
