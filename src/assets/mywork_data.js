@@ -24,8 +24,8 @@ const mywork_data = [
     w_name: "Portfolio Website",
     w_img: project3_img,
     w_tech: ["React", "CSS", "Responsive"],
-    live_link: "#", // placeholder for live portfolio link
-    github_link: "#" // placeholder for portfolio GitHub repo
+    live_link: "https://my-portfolio-xi-smoky-80.vercel.app/", 
+    github_link: "https://github.com/2244mv/my-portfolio" 
   }
 ];
 
