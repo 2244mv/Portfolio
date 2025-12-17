@@ -3,6 +3,7 @@ import "./Hero.css";
 import profile_img from "../../assets/profile_img.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 // import resumePDF from "../../../public/resume.pdf";
+import resumePDF from "../../assets/resume.pdf";
 
 const Hero = () => {
   const fullText = "I'm Manish Verma, Frontend Developer";
@@ -48,7 +49,8 @@ const Hero = () => {
           Connect with me
         </AnchorLink>
         <a
-          href="../../../public/resume.pdf"
+          // href="../../../public/resume.pdf"
+          href={resumePDF}
           className="hero-resume"
           target="_blank"
           rel="noopener noreferrer"
