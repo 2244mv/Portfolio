@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import "./Contact.css";
 import mail_icon from "../../assets/mail_icon.svg";
 import location_icon from "../../assets/location_icon.svg";
@@ -15,7 +15,7 @@ const Contact = () => {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        body: formData
       });
 
       const data = await response.json();
@@ -27,7 +27,6 @@ const Contact = () => {
         setResult("Something went wrong. Please try again.");
       }
 
-      // Automatically clear message after 3 seconds
       setTimeout(() => setResult(""), 3000);
     } catch (error) {
       setResult("Network error. Please try later.");
@@ -35,40 +34,32 @@ const Contact = () => {
     }
   };
 
-  // Function to detect Enter key
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault(); // prevent new line in textarea
-      document.querySelector(".contact-submit").click();
-    }
-  };
-
   return (
-    <section id="contact" className="contact">
-      <div className="contact-title">
+    <section id='contact' className='contact'>
+      <div className='contact-title'>
         <h1>Get in Touch</h1>
       </div>
 
-      <div className="contact-section">
+      <div className='contact-section'>
         {/* Left Info */}
-        <div className="contact-left">
+        <div className='contact-left'>
           <h2>Let's Talk</h2>
           <p>
             I'm currently available for new projects. Feel free to reach out for
             any inquiries or collaborations.
           </p>
 
-          <div className="contact-details">
+          <div className='contact-details'>
             <div className="contact-detail">
-              <img src={mail_icon} alt="Email Icon" />
+              <img src={mail_icon} alt='Email Icon' />
               <p>2244mv@gmail.com</p>
             </div>
             <div className="contact-detail">
-              <img src={call_icon} alt="Phone Icon" />
+              <img src={call_icon} alt='Phone Icon' />
               <p>+91 9602938244</p>
             </div>
             <div className="contact-detail">
-              <img src={location_icon} alt="Location Icon" />
+              <img src={location_icon} alt='Location Icon' />
               <p>Delhi, India</p>
             </div>
           </div>
@@ -76,37 +67,34 @@ const Contact = () => {
 
         {/* Right Form */}
         <form onSubmit={onSubmit} className="contact-right">
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor='name'>Your Name</label>
           <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
+            type='text'
+            id='name'
+            name='name'
+            placeholder='Enter your full name'
             required
-            onKeyDown={handleKeyDown}
           />
 
-          <label htmlFor="email">Your Email</label>
+          <label htmlFor='email'>Your Email</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email address"
+            type='email'
+            id='email'
+            name='email'
+            placeholder='Enter your email address'
             required
-            onKeyDown={handleKeyDown}
           />
 
-          <label htmlFor="message">Message</label>
+          <label htmlFor='message'>Message</label>
           <textarea
-            id="message"
-            name="message"
+            id='message'
+            name='message'
             rows="6"
-            placeholder="Write your message here"
+            placeholder='Write your message here'
             required
-            onKeyDown={handleKeyDown}
           ></textarea>
 
-          <button type="submit" className="contact-submit">
+          <button type='submit' className='contact-submit'>
             Submit Now
           </button>
 
