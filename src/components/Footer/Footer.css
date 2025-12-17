@@ -1,0 +1,85 @@
+/* ================= FOOTER ================= */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 6% 20px; /* reduced bottom padding to bring closer to contact */
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin-top: -30px;
+}
+
+/* ================= DIVIDER ================= */
+.footer hr {
+  margin: 0 0 25px; /* removed top margin to reduce gap */
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left */
+.footer-bottom-left {
+  font-size: 0.95rem; /* increased font size */
+  color: #aaa;
+  margin: 0;
+}
+
+/* Right (Links + Social Icons) */
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.connect-text {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.connect-text:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
+  border-radius: 2px;
+}
+
+/* Social Icons */
+.footer-social-icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.footer-social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
+    gap: 12px;
+  }
+}

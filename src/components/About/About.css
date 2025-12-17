@@ -1,0 +1,145 @@
+/* ================= ABOUT SECTION ================= */
+.about {
+  padding: 100px 2% 60px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* ================= TITLE ================= */
+.about-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+  /* background: white; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient underline like Hero */
+.about-title h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.about-title h1:hover::after {
+  width: 100%;
+}
+
+/* ================= CONTENT ================= */
+.about-sections {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-right {
+  max-width: 780px;
+  width: 100%;
+}
+
+/* Paragraphs */
+.about-para p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  text-align: left;
+  padding: 0 4px;
+}
+
+/* ================= SKILLS ================= */
+.about-skills {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Skill text – BIGGER */
+.about-skills p {
+  font-size: 1.25rem; /* increased size */
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Gradient underline ONLY on hover */
+.about-skills p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.about-skills p:hover::after {
+  width: 100%;
+}
+
+/* ================= ACHIEVEMENTS ================= */
+.about-achievements {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-achievement {
+  background-color: #1a1a1a;
+  padding: 18px;
+  border-radius: 15px;
+  min-width: 240px;
+  max-width: 380px;
+  border: 2px solid #df8908;
+  transition: transform 0.3s ease;
+}
+
+.about-achievement:hover {
+  transform: translateY(-2px);
+}
+
+.about-achievement h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #df8908;
+}
+
+.about-achievement p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-para p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .about-skills {
+    align-items: center;
+  }
+
+  .about-skills p {
+    font-size: 1.15rem;
+  }
+}

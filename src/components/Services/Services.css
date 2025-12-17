@@ -1,0 +1,192 @@
+/* ================= SERVICES SECTION ================= */
+.services {
+  padding: 100px 6%;
+  background-color: #000;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* ================= TITLE ================= */
+.services-title h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Gradient underline for title */
+.services-title h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.services-title h1:hover {
+  transform: translateY(-4px);
+}
+
+.services-title h1:hover::after {
+  width: 100%;
+}
+
+/* ================= SERVICES GRID ================= */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* close cards */
+  width: 100%;
+  padding-top: 50px;
+}
+
+/* ================= SERVICE CARD ================= */
+.services-card {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealCard 0.8s forwards;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Gradient top border */
+.services-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+}
+
+/* Staggered animation */
+.services-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.services-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.services-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.services-card:nth-child(4) {
+  animation-delay: 0.55s;
+}
+.services-card:nth-child(5) {
+  animation-delay: 0.7s;
+}
+.services-card:nth-child(6) {
+  animation-delay: 0.85s;
+}
+
+/* Hover effect */
+.services-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: linear-gradient(
+    180deg,
+    #111 0%,
+    rgba(180, 21, 255, 0.05) 50%,
+    rgba(223, 137, 8, 0.05) 100%
+  );
+  box-shadow: 0 12px 30px rgba(223, 137, 8, 0.25),
+    0 0 20px rgba(180, 21, 255, 0.15);
+}
+
+/* ================= SERVICE NUMBER ================= */
+.services-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #b415ff, #df8908);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= SERVICE TITLE ================= */
+.services-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Gradient underline on hover */
+.services-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.services-card h2:hover::after {
+  width: 100%;
+}
+
+/* ================= DESCRIPTION ================= */
+.services-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes revealCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-top: 25px;
+  }
+
+  .services-card {
+    text-align: center;
+  }
+
+  .services-card h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,139 @@
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ================= LOGO (CIRCULAR) ================= */
+.nav-logo {
+  height: 42px;
+  width: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid #8ae18e;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MENU ================= */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-menu li {
+  position: relative;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline for menu items */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #b415ff, #df8908);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* ================= CONNECT BUTTON ================= */
+.nav-connect a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover without underline */
+.nav-connect a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #df8908 10%, #b415ff 100%);
+}
+
+/* ❌ REMOVE underline effect from button */
+.nav-connect a::after {
+  display: none;
+}
+
+/* ================= MOBILE MENU ICONS ================= */
+.nav-mob-open {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+.nav-mob-close {
+  display: none;
+  width: 25px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .nav-connect {
+    display: none;
+  }
+
+  .nav-mob-open {
+    display: block;
+  }
+
+  .nav-logo {
+    height: 34px;
+    width: 34px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 300px;
+    height: 100%;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #1f0016;
+    padding: 40px 20px;
+    transition: right 0.5s ease;
+    z-index: 20;
+  }
+
+  .nav-mob-close {
+    display: block;
+    align-self: flex-end;
+  }
+}
