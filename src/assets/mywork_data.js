@@ -24,8 +24,8 @@ const mywork_data = [
     w_name: "Google Gemini",
     w_img: project3_img,
     w_tech: ["React", "CSS", "Responsive"],
-    live_link: "https://my-portfolio-xi-smoky-80.vercel.app/", 
-    github_link: "https://github.com/2244mv/my-portfolio" 
+    live_link: "https://gemini-cyan-xi.vercel.app/", 
+    github_link: "https://github.com/2244mv/Gemini" 
   }
 ];
 
