@@ -70,7 +70,7 @@
 
 /* Skill text – BIGGER */
 .about-skills p {
-  font-size: 1.25rem; /* increased size */
+  font-size: 1.25rem; 
   font-weight: 600;
   position: relative;
   cursor: pointer;

@@ -1,0 +1,127 @@
+/* ================= RESUME PAGE ================= */
+.resume {
+  padding: 120px 8%;
+  background: #0b0b0b;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.resume-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.resume-top-actions {
+  display: flex;
+  justify-content: space-between; 
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid #df8908;
+  color: #df8908;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  background: #482d03; 
+  color: #fff;
+  border: none;
+}
+
+.resume-download{
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid #df8908;
+  color: #df8908;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.resume-download:hover {
+  transform: scale(1.05);
+  background: #482d03;
+  color: #fff;
+  border: none;
+}
+
+/* ================= HEADER ================= */
+.resume-header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.resume-header h2 {
+  font-size: 22px;
+  color: #df8908;
+  margin-bottom: 10px;
+}
+
+.resume-header p {
+  max-width: 800px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* ================= CARDS ================= */
+.resume-card {
+  background: #111;
+  padding: 25px 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.resume-card ul {
+  padding-left: 20px;
+}
+
+.resume-card li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .resume {
+    padding: 100px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 90px 5%;
+  }
+
+  .resume-top-actions {
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .back-btn,
+  .resume-download {
+    width: 100%;
+    text-align: center;
+  }
+}
+

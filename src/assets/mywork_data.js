@@ -7,7 +7,7 @@ const mywork_data = [
     w_no: 1,
     w_name: "Shopsy E-commerce",
     w_img: project1_img,
-    w_tech: ["React", "Tailwind CSS", "API"],
+    w_tech: ["React", "Tailwind CSS"],
     live_link: "https://shopsy-nine-snowy.vercel.app/",
     github_link: "https://github.com/2244mv/Shopsy"
   },
@@ -21,7 +21,7 @@ const mywork_data = [
   },
   {
     w_no: 3,
-    w_name: "Portfolio Website",
+    w_name: "Google Gemini",
     w_img: project3_img,
     w_tech: ["React", "CSS", "Responsive"],
     live_link: "https://my-portfolio-xi-smoky-80.vercel.app/", 

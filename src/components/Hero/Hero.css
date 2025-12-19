@@ -62,25 +62,27 @@
   justify-content: center;
 }
 
-/* Connect button */
+/* ================= CONNECT BUTTON ================= */
 .hero-connect {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 22px;
   border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
   color: #fff;
   background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
-  transition: transform 0.3s ease, background 0.3s ease;
+  border: none;
 }
 
 .hero-connect:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #df8908 10%, #b415ff 100%);
+  color: #fff;
 }
 
-/* Resume button */
+/* ================= RESUME BUTTON (MATCH CONNECT BUTTON) ================= */
 .hero-resume {
   padding: 10px 22px;
   border-radius: 25px;
