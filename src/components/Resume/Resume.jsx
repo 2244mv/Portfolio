@@ -10,7 +10,11 @@ const Resume = () => {
       <div className="resume-container">
         {/* ACTION BAR */}
         <div className="resume-top-actions">
-          <button className="back-btn" onClick={() => navigate(-1)}>
+          <button
+            type="button"
+            className="back-btn"
+            onClick={() => navigate(-1)}
+          >
             ← Back
           </button>
 
@@ -27,46 +31,198 @@ const Resume = () => {
         <header className="resume-header">
           <h1>Manish Verma</h1>
           <h2>Frontend Developer</h2>
+
+          <div className="resume-contact">
+            <a href="tel:9602938244">📞 9602938244</a>
+
+            <a href="mailto:2244mv@gmail.com">📧 2244mv@gmail.com</a>
+
+            <a
+              href="https://portfolio-liart-eta-r63rhydkhy.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Portfolio
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/manish-verma-5b98ba382/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/2244mv"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://leetcode.com/manishverma244/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LeetCode
+            </a>
+          </div>
+
           <p>
-            Frontend Developer with hands-on experience in React.js, JavaScript,
-            HTML5, CSS3, and responsive UI development.
+            Frontend Developer specializing in React.js and JavaScript (ES6+)
+            with experience building scalable, responsive web applications.
+            Proficient in component-based architecture, REST API integration, UI
+            performance optimization, and modern frontend tools, delivering
+            high-quality user experiences in Agile environments.
           </p>
         </header>
 
-        {/* EXPERIENCE */}
+        {/* TECHNICAL SKILLS */}
         <section>
-          <h3>Professional Experience</h3>
+          <h3>Technical Skills</h3>
+
           <article className="resume-card">
-            <h4>Frontend Developer</h4>
-            <span>2024 – Present</span>
-            <ul>
-              <li>Built responsive web applications using React.js</li>
-              <li>Developed reusable UI components and optimized performance</li>
-              <li>Used Git & GitHub for version control and collaboration</li>
-            </ul>
+            <h4>Languages</h4>
+            <p>JavaScript (ES6+)</p>
+          </article>
+
+          <article className="resume-card">
+            <h4>Frontend</h4>
+            <p>
+              React.js, HTML5, CSS3, Redux, React Hooks, Context API,
+              Material-UI, Shadcn-UI, TanStack, Zustand
+            </p>
+          </article>
+
+          <article className="resume-card">
+            <h4>Tools</h4>
+            <p>Git, GitHub, AWS (Basic), Cloudinary</p>
           </article>
         </section>
 
-        {/* SKILLS */}
+        {/* PROJECTS */}
         <section>
-          <h3>Technical Skills</h3>
-          <ul className="skills">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React.js</li>
-            <li>Git & GitHub</li>
-            <li>Responsive Web Design</li>
-          </ul>
+          <h3>Projects</h3>
+
+          <article className="resume-card">
+            <h4>Gemini – AI Chatbot Application</h4>
+            <a
+              href="https://gemini-cyan-xi.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://gemini-cyan-xi.vercel.app/
+            </a>
+
+            <ul>
+              <li>
+                Developed a fully functional clone of Google Gemini AI chatbot
+                using React.js and Vite with a modern conversational UI.
+              </li>
+              <li>
+                Integrated Google Generative AI API (Gemini-Pro model) for
+                prompt-based text generation with async request handling.
+              </li>
+              <li>
+                Implemented state management using React Context API for chat
+                history, prompts, and loading states.
+              </li>
+              <li>
+                Built advanced UI/UX features including sidebar history, typing
+                animations, loaders, fade effects, and dark/light themes.
+              </li>
+              <li>
+                Deployed on Vercel, demonstrating end-to-end development and
+                deployment skills.
+              </li>
+            </ul>
+          </article>
+
+          <article className="resume-card">
+            <h4>Shopsy – E-Commerce Web Application</h4>
+            <a
+              href="https://shopsy-nine-snowy.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://shopsy-nine-snowy.vercel.app/
+            </a>
+
+            <ul>
+              <li>
+                Developed a React-based e-commerce application improving UI
+                responsiveness by 30% through optimized rendering.
+              </li>
+              <li>
+                Implemented product listing and cart functionality using React
+                Hooks and state management.
+              </li>
+              <li>
+                Designed mobile-first responsive layouts using Tailwind CSS,
+                Flexbox, and Grid.
+              </li>
+              <li>
+                Followed clean code principles to improve performance and
+                maintainability.
+              </li>
+            </ul>
+          </article>
+
+          <article className="resume-card">
+            <h4>MovieFlix – Movie Browsing Application</h4>
+            <a
+              href="https://movie-flix-movie-app.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://movie-flix-movie-app.vercel.app/
+            </a>
+
+            <ul>
+              <li>
+                Built a dynamic movie browsing app using React functional
+                components.
+              </li>
+              <li>
+                Implemented search functionality and dynamic rendering using
+                React Hooks.
+              </li>
+              <li>
+                Managed application state and props for consistent UI behavior.
+              </li>
+              <li>
+                Created a responsive interface using modern CSS techniques.
+              </li>
+            </ul>
+          </article>
         </section>
 
         {/* EDUCATION */}
         <section>
           <h3>Education</h3>
+
           <article className="resume-card">
-            <h4>Bachelor’s Degree – Computer Science</h4>
-            <span>2021 – 2024</span>
+            <h4>M.Sc – Mathematics</h4>
+            <p>Maharaja Ganga Singh University</p>
+            <span>2023 – Present</span>
           </article>
+
+          <article className="resume-card">
+            <h4>B.Sc – Computer Applications</h4>
+            <p>Maharaja Ganga Singh University</p>
+            <span>2019 – 2023</span>
+          </article>
+        </section>
+
+        {/* CERTIFICATIONS */}
+        <section>
+          <h3>Certifications & Achievements</h3>
+          <ul className="skills">
+            <li>NCC Certificate – National Cadet Corps</li>
+            <li>National Level Player – Tchoukball</li>
+          </ul>
         </section>
       </div>
     </main>

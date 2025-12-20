@@ -14,7 +14,7 @@
 /* ================= ACTION BUTTONS ================= */
 .resume-top-actions {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   gap: 15px;
   flex-wrap: wrap;
   margin-bottom: 30px;
@@ -32,12 +32,12 @@
 
 .back-btn:hover {
   transform: scale(1.05);
-  background: #482d03; 
+  background: #482d03;
   color: #fff;
   border: none;
 }
 
-.resume-download{
+.resume-download {
   padding: 12px 26px;
   border-radius: 30px;
   background: transparent;
@@ -46,7 +46,6 @@
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-
 }
 
 .resume-download:hover {
@@ -71,7 +70,43 @@
 .resume-header p {
   max-width: 800px;
   color: #ccc;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+
+/* ================= CONTACT LINKS ================= */
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.resume-contact a {
+  color: #df8908;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ================= GLOBAL LINK STYLE ================= */
+.resume a {
+  color: #72d323;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+
+
+/* ================= SECTION HEADINGS ================= */
+.resume section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-left: 4px solid #df8908;
+  padding-left: 10px;
 }
 
 /* ================= CARDS ================= */
@@ -80,6 +115,19 @@
   padding: 25px 30px;
   border-radius: 16px;
   margin-bottom: 30px;
+}
+
+.resume-card h4 {
+  margin-bottom: 5px;
+}
+
+.resume-card p {
+  color: #ccc;
+}
+
+.resume-card a {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .resume-card ul {
@@ -98,6 +146,13 @@
   gap: 12px;
   list-style: none;
   padding: 0;
+}
+
+.skills li {
+  background: #1a1a1a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -123,5 +178,9 @@
     width: 100%;
     text-align: center;
   }
-}
 
+  .resume-contact {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
