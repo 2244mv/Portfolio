@@ -5,36 +5,53 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const fullText = "I'm Manish Verma, Frontend Developer";
+  const textBeforeName = "I'm ";
+  const name = "Manish Verma" + ",";
+  const role = "Frontend Developer";
+
+  const fullText = `${textBeforeName}${name} ${role}`;
+
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
     if (charIndex < fullText.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + fullText[charIndex]);
-        setCharIndex(charIndex + 1);
+        setDisplayedText((prev) => prev + fullText.charAt(charIndex));
+        setCharIndex((prev) => prev + 1);
       }, 100);
 
       return () => clearTimeout(timeout);
     }
-  }, [charIndex, fullText]);
-
-  const formattedText = displayedText.includes("Manish Verma")
-    ? displayedText.replace(
-        "Manish Verma",
-        "<span class='hero-name'>Manish Verma</span>"
-      )
-    : displayedText;
+  }, [charIndex]);
 
   return (
     <section id="home" className="hero">
-      <img src={profile_img} alt="Manish Verma" className="hero-img" />
-
-      <h1
-        className="hero-heading"
-        dangerouslySetInnerHTML={{ __html: formattedText }}
+      <img
+        src={profile_img}
+        alt="Manish Verma"
+        className="hero-img"
+        loading="lazy"
       />
+
+      <h1 className="hero-heading">
+        {displayedText.startsWith(textBeforeName) ? (
+          <>
+            {textBeforeName}
+            <span className="hero-name">
+              {displayedText.slice(
+                textBeforeName.length,
+                textBeforeName.length + name.length
+              )}
+            </span>
+            <span className="hero-role">
+              {displayedText.slice(textBeforeName.length + name.length)}
+            </span>
+          </>
+        ) : (
+          displayedText
+        )}
+      </h1>
 
       <p className="hero-text">
         Frontend Developer specializing in React, JavaScript, HTML, CSS, and

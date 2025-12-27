@@ -45,9 +45,12 @@
   font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
+
+  /* 🔥 remove mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Animated underline for menu items */
+/* Animated underline */
 .nav-menu li a::after {
   content: "";
   position: absolute;
@@ -76,31 +79,41 @@
   color: #fff;
   background: linear-gradient(90deg, #b415ff 10%, #df8908 100%);
   transition: transform 0.3s ease, background 0.3s ease;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Hover without underline */
 .nav-connect a:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #df8908 10%, #b415ff 100%);
 }
 
-/* ❌ REMOVE underline effect from button */
 .nav-connect a::after {
   display: none;
 }
 
 /* ================= MOBILE MENU ICONS ================= */
-.nav-mob-open {
-  display: none;
-  width: 30px;
-  cursor: pointer;
-}
-
+.nav-mob-open,
 .nav-mob-close {
   display: none;
-  width: 25px;
   cursor: pointer;
-  margin-bottom: 20px;
+
+  /* 🔥 remove purple dotted highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ================= REMOVE PURPLE DOTTED OUTLINE ================= */
+.nav-menu a:focus:not(:focus-visible),
+.nav-mob-open:focus,
+.nav-mob-close:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ✅ Accessible focus (keyboard only) */
+.nav-menu a:focus-visible {
+  outline: 2px solid #df8908;
+  outline-offset: 4px;
 }
 
 /* ================= MOBILE ================= */
@@ -111,6 +124,7 @@
 
   .nav-mob-open {
     display: block;
+    width: 30px;
   }
 
   .nav-logo {
@@ -134,6 +148,8 @@
 
   .nav-mob-close {
     display: block;
+    width: 25px;
     align-self: flex-end;
+    margin-bottom: 20px;
   }
 }
